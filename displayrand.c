@@ -3,8 +3,8 @@
 #include<time.h>
 int main(){
     int a;
-     srand(time(0));
-     a = rand();
+     
+     a = rand()%900 + 100 ;
 
     printf("the random number is %d", a);
 }

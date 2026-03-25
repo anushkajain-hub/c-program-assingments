@@ -2,16 +2,16 @@
 #include<math.h>
 
 void main() {
-    int num , b=0, rem;
-     printf("Enter a binary number: ");
-     scanf("%d" , &num);
+    int num, temp, bi = 0, i;
 
-     while (num>0){
-     rem = num%10;
-     b = b+ num*pow(2, num);
-     num= num/10;
+    printf("Enter a binary number: ");
+    scanf("%d", &num);
 
-     
-     }
-     printf("the decimal value is ; %d", b) ;
+    for (i = 0; i < 8; i++) {  
+        temp = num % 10;        
+        bi = bi + temp * pow(2, i);
+        num = num / 10;         
+    }
+
+    printf("The decimal value is: %d", bi);
 }
